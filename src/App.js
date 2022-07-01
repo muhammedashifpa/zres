@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="" element={<Navigate to={'pos/'} />} />
-        <Route path="pos/" element={<Pos />} />
+        <Route path="pos/*" element={<Pos />} />
         <Route path="kds" element={<Kds />} />
       </Routes>
     </div>
