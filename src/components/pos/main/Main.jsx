@@ -8,7 +8,9 @@ const Main = () => {
   return (
     <MainWrapper className='p-3'>
       <SideBar/>
-      <Outlet/>
+      <OutletWrapper className='p-3 bg-light'>
+        <Outlet/>
+      </OutletWrapper>
     </MainWrapper>
   )
 }
@@ -20,4 +22,7 @@ const MainWrapper = styled.div`
   grid-template-columns: 1fr 6fr;
   column-gap: 1rem;
   height: 100vh;
+`
+const OutletWrapper = styled.div`
+  /* padding: 1rem; */
 `

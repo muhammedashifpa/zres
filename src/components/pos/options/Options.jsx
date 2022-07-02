@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import OrderTakingOption from './components/OrderTakingOption'
 import MainOption from './components/MainOption'
-import Modal from '../../utils/Modal/Modal'
 
 const Options = () => {
    
