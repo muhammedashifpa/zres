@@ -2,6 +2,7 @@ import React from 'react'
 import Backdrop from './utils/Backdrop'
 import  ReactDOM from 'react-dom';
 import ModalOverlay from './utils/ModalOverlay';
+import { OrderOption } from '../../pos/options/components/OrderOption';
 
 const Modal = (props) => {
   return (
@@ -12,10 +13,9 @@ const Modal = (props) => {
         )}
         {props.open&&ReactDOM.createPortal(
             <ModalOverlay
-            title={'Dine in'}
             onClose={props.onClose}
             >
-                {props.component}
+               <OrderOption classname="text-center" />
             </ModalOverlay>,
             document.getElementById('overlay-root')
         )}

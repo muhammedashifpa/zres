@@ -5,6 +5,7 @@ const OrderTakingOption = () => {
   return (
     <OrderOptions>
       <h5 className=''>Order Taking Options</h5>
+      
     </OrderOptions>
   );
 }
@@ -16,7 +17,7 @@ const OrderOptions = styled.div`
   background: white;
   border-radius: 20px;
   padding-top: 50px;
-  box-shadow: 0px 0px 6px 0px rgba(122, 119, 119, 0.75);
+  box-shadow: 0px 0px 6px 0px rgba(151, 146, 146, 0.75);
   h5 {
     color: #040153;
   }
