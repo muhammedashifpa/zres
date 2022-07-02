@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Modal from '../../../utils/Modal/Modal';
 import { OrderOptionForModal } from './OrderOptionForModal';
+import BlockLoading from '../../../utils/loading/BlockLoading/BlockLoading'
 
 const OrderTakingOption = () => {
-  const [modalOpen,setModalOpen] = useState();
+  const [modalOpen,setModalOpen] = useState(false);
 
   const closeHandler = () => {
-    setModalOpen(null)
+    setModalOpen(false)
   }
 
   const openHandler = () => {
@@ -17,6 +18,7 @@ const OrderTakingOption = () => {
     <>
     <OrderOptions onClick={openHandler}>
       <h5 className=''>Order Taking Options</h5>
+      <BlockLoading/>
     </OrderOptions>
       {modalOpen&&<Modal 
       title={'Order Taking Options'}
