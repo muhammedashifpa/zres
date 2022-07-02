@@ -25,12 +25,11 @@ const Pos = () => {
           <Route path='dashbord' element={<Dashbord/>}/>
           <Route path='walk-in' element={<WalkIn/>}/>
           <Route path='dine-in' element={<DineIn/>}/>
-          <Route path='crm' element={<Crm/>}/>
+          <Route path='crm/*' element={<Crm/>}/>
           <Route path='delivery-management' element={<DeliveryManagement/>}/>
           <Route path='invetory' element={<Inventory/>}/>
           <Route path='accounts' element={<Accounts/>}/>
         </Route>
-        
     </Routes>
     
   )
