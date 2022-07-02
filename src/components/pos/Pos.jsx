@@ -21,7 +21,7 @@ const Pos = () => {
         <Route path='login' element={<Login/>}/>
         <Route path='pos-options' element={<Options/>}/>
         <Route path='main' element={<Main/>}>
-          <Route path='' element={<Navigate to='dashbord'/>}/>
+          {/* <Route path='' element={<Navigate to='dashbord'/>}/> */}
           <Route path='dashbord' element={<Dashbord/>}/>
           <Route path='walk-in' element={<WalkIn/>}/>
           <Route path='dine-in' element={<DineIn/>}/>

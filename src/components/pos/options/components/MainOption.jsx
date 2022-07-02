@@ -1,11 +1,29 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styled from 'styled-components'
+import Modal from '../../../utils/Modal/Modal';
+import { OrderOptionForModal } from './OrderOptionForModal';
 
 const MainOption = () => {
+  const [modalOpen,setModalOpen] = useState();
+
+  const closeHandler = () => {
+    setModalOpen(null)
+  }
+
+  const openHandler = () => {
+    setModalOpen(true)
+  }
   return (
-    <Options>
+    <>
+    <Options onClick={openHandler}>
       <h5>Main Options</h5>
     </Options>
+    {modalOpen&&<Modal
+      title={'Main Options'}
+      element={<OrderOptionForModal />}
+      onClose={closeHandler}
+      />}
+    </>
   )
 }
 

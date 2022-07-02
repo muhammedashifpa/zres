@@ -12,7 +12,6 @@ const OrderTakingOption = () => {
 
   const openHandler = () => {
     setModalOpen(true)
-    console.log(setModalOpen(true))
   }
   return (
     <>
@@ -21,7 +20,7 @@ const OrderTakingOption = () => {
     </OrderOptions>
       {modalOpen&&<Modal 
       title={'Order Taking Options'}
-      element={<OrderOptionForModal/>}
+      element={<OrderOptionForModal options='order-taking-options'/>}
       onClose={closeHandler}
       />}
     </>
