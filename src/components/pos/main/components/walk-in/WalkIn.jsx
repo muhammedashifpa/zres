@@ -1,26 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
+import { LeftHead } from './components/LeftHead';
+import { LeftTable } from './components/LeftTable';
+import { WalkinHeaderButtons } from './components/WalkinHeaderButtons';
+import { LeftOrderBill } from './components/LeftOrderBill';
+import { RightSide } from './components/rightSide/RightSide';
+import {WalkinBottomButtons} from './components/WalkinBottomButtons'
 
 const WalkIn = () => {
   return (
     <WalkinOuter className="p-1">
-      <div className="nav bg-light p-3 mt-5">
-        <div className="buttons w-100 d-flex justify-content-between">
-          <div className="">
-            <button className="btn btn-food px-4 py-2">
-              <img src="/images/walkin/foodbtn.png" className="me-2" alt="" />
-              Food
-            </button>
-            <button className="btn btn-beverage px-4 py-2  me-auto">Beverage</button>
-          </div>
-          <div className="">
-            <button className="btn btn-loyality px-4 py-2  me-auto">Loyality</button>
-            <button className="btn btn-notes px-4 py-2  me-auto"> Add Notes</button>
-            <button className="btn btn-notes px-4 py-2  me-auto"> Discount</button>
-            <button className="btn btn-notes px-4 py-2  me-auto"> Place Order</button>
-          </div>
+      <WalkinHeaderButtons />
+      <div className="mainSection row d-flex justify-content-between mx-2 mt-2">
+        <div className="left col-5 bg-light shadow p-2 mt-2">
+          <LeftHead />
+          <hr />
+          <LeftTable tableData={tableDetails} />
+          <hr />
+          <LeftOrderBill bill={BillDetails} />
+        </div>
+        <div className="right col-6 bg-light shadow p-2 mt-2">
+          <RightSide />
         </div>
       </div>
+      <WalkinBottomButtons />
     </WalkinOuter>
   );
 }
@@ -31,30 +34,56 @@ const WalkinOuter = styled.div`
   background: rgba(102, 100, 100, 0.12);
   height: 100vh;
   border-radius: 20px;
-  .nav {
+  .left,.right{
     border-radius: 20px;
-    .btn-food {
-      background: #e1870e;
-      color: white;
-      border-radius: 15px;
-    }
-    .btn-beverage {
-      background: #31cdd2;
-
-      color: white;
-      border-radius: 15px;
-    }
-    .btn-loyality {
-      background: #dfa75c;
-
-      color: white;
-      border-radius: 15px;
-    }
-    .btn-notes {
-      background: #dfa75c;
-
-      color: white;
-      border-radius: 15px;
-    }
   }
 `;
+
+
+const tableDetails = [
+  {
+    name: "jack",
+    quantity: "3",
+    price: 150,
+    SubTotal: 500,
+  },
+  {
+    name: "Jill",
+    quantity: "3",
+    price: 150,
+    SubTotal: 500,
+  },
+  {
+    name: "sumesh",
+    quantity: "3",
+    price: 150,
+    SubTotal: 500,
+  },
+  {
+    name: "ramesh",
+    quantity: "3",
+    price: 150,
+    SubTotal: 500,
+  },
+];
+
+const BillDetails = [
+  {
+    name: "SubTotal",
+    count: 500,
+    style: "sub"
+  },
+  {
+    name: "Tax",
+    count: 4.723,
+  },
+  {
+    name: "Discount",
+    count: 10,
+  },
+  {
+    name: "Total",
+    count: 496.23,
+    style: "total",
+  },
+];

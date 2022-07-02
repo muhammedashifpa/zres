@@ -6,7 +6,7 @@ import SideBar from './components/main-utils/SideBar';
 const Main = () => {
   console.log('SideBar')
   return (
-    <MainWrapper className='p-3'>
+    <MainWrapper className=''>
       <SideBar/>
       <OutletWrapper className='p-3 bg-light'>
         <Outlet/>
