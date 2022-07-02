@@ -2,7 +2,6 @@ import React from 'react'
 import {
     Routes,
     Route,
-    Navigate
   } from "react-router-dom";
 import Login from './login/Login';
 import Accounts from './main/components/accounts/Accounts';
