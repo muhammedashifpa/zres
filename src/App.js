@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Pos from './components/pos/Pos';
 import Kds from './components/kds/Kds';
+import FullLoading from './components/utils/loading/fullLoading/FullLoading';
+import BlockLoading from './components/utils/loading/BlockLoading/BlockLoading';
 
 
 function App() {
