@@ -7,14 +7,14 @@ const ModalOverlay = (props) => {
   return (
     <>
       <div className="col-4">
-        <ModalOverlayWrapper className="">
+        <ModalOverlayWrapper className="card">
           <button
             type="button"
-            class="btn-close position-absolute"
+            className="btn-close position-absolute"
             onClick={props.onClose}
           ></button>
-          {props.title && <h5 class="card-header text-center fw-bold">{props.title}</h5>}
-          <div class="card-body text-center">{props.children}</div>
+          {props.title && <h5 className="card-header text-center fw-bold">{props.title}</h5>}
+          <div className="card-body text-center">{props.children}</div>
         </ModalOverlayWrapper>
       </div>
     </>

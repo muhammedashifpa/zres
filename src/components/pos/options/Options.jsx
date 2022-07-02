@@ -8,10 +8,6 @@ const Options = () => {
    
   return (
     <>
-      {/* <div>Options</div>
-    <OrderTakingOption/>
-    <MainOption/> */}
-
       <div className="p-3">
         <OptionsOuter className="row m-0 flex align-items-center justify-content-evenly">
           <div className="col-3 text-center">
@@ -22,7 +18,6 @@ const Options = () => {
           </div>
         </OptionsOuter>
       </div>
-      <Modal open  />
     </>
   );
 }

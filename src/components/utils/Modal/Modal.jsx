@@ -2,20 +2,22 @@ import React from 'react'
 import Backdrop from './utils/Backdrop'
 import  ReactDOM from 'react-dom';
 import ModalOverlay from './utils/ModalOverlay';
-import { OrderOption } from '../../pos/options/components/OrderOption';
 
 const Modal = (props) => {
+  console.log(props.onClose)
   return (
     <>
-        {props.open&&ReactDOM.createPortal(
+        {ReactDOM.createPortal(
             <Backdrop onClose={props.onClose} />,
             document.getElementById('backdrop-root')
         )}
-        {props.open&&ReactDOM.createPortal(
+        {ReactDOM.createPortal(
             <ModalOverlay
             onClose={props.onClose}
+            title={props.title}
             >
-               <OrderOption classname="text-center" />
+               {/* <OrderOption classname="text-center" /> */}
+               {props.element}
             </ModalOverlay>,
             document.getElementById('overlay-root')
         )}
