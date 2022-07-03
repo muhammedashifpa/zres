@@ -17,10 +17,10 @@ const GeneralInformation = (props) => {
 
         <ul className="nav nav-tabs">
           <li onClick={() => props.onDeleveryHandler()} className="nav-item">
-            <a href="#" className="nav-link">Delivery</a>
+            <a href="#" className={`nav-link ${props.active==='delivery'&&'active'}`}>Delivery</a>
           </li>
           <li onClick={props.onPickupHandler} className="nav-item">
-            <a href="#" className="nav-link">Pickup Location</a>
+            <a href="#" className={`nav-link ${props.active==='pickup'&&'active'}`}>Pickup Location</a>
           </li>
         </ul>
       </UserDetailsWrapper>

@@ -9,11 +9,14 @@ import Button from "../../../../../../utils/button/Button"
 const AddCustomers = () => {
   const [deliverytab, setDeliverytab] = React.useState(true);
   const [pickuptab, setPickuptab] = React.useState(false);
+  const [active, setActive] = React.useState('delivery')
   const delveryhandler = () => {
+    setActive('delivery')
     setDeliverytab(true);
     setPickuptab(false);
   };
   const pickuphandler = () => {
+    setActive('pickup')
     setDeliverytab(false);
     setPickuptab(true);
   };
@@ -31,12 +34,13 @@ const AddCustomers = () => {
         <GeneralInformation
           onDeleveryHandler={delveryhandler}
           onPickupHandler={pickuphandler}
+          active={active}
         />
         {deliverytab && (
           <>
             <Delivery />
             <ButtonWrapper>
-              <Button className='btn btn-secondary' name='cancel'/>
+              <Button className='btn btn-secondary ' name='cancel'/>
               <Button type='submit' className='btn btn-primary' name='save'/>
             </ButtonWrapper>
           </>
