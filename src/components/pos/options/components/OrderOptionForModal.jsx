@@ -26,7 +26,7 @@ export const OrderOptionForModal = (props) => {
               onClick={()=>navigate('/pos/main/take-away')}/>
             <Button name='Delivery' 
               className='btn-danger d-block mx-auto my-1 py-3' 
-              onClick={()=>navigate('/pos/main/delivery')}/>
+              onClick={()=>navigate('/pos/main/delivery-management')}/>
           </div>
         </>
       ) : (

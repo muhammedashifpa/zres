@@ -9,26 +9,25 @@ const CrmMain = () => {
   return (
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-6">
+        <div class="col-12">
           <div
             style={{
-              width: "600px",
               height: "100px",
               backgroundColor: "#d3d3d3",
             }}
             class="border rounded-4"
           >
             <div className="row">
-              <div className="col-md-3 mt-3 ">
+              <div className="col-4 mt-3 ">
                 <NavLink
                   to="/pos/main/crm/sms"
                   className="nav-link"
                   aria-current="page"
                 >
-                  <div className="ms-5">
+                  <div className="d-flex align-items-center flex-column">
                     <h6>SMS</h6>
                     <BsFillChatLeftDotsFill
-                      className="text-primary ms-1"
+                      className="text-primary"
                       size={25}
                     />
                   </div>
@@ -40,21 +39,21 @@ const CrmMain = () => {
                   className="nav-link"
                   aria-current="page"
                 >
-                  <div className="ms-4">
+                  <div className="d-flex align-items-center flex-column">
                     <h6>ADD CUSTOMER</h6>
-                    <IoIosPersonAdd className="text-primary ms-5" size={28} />
+                    <IoIosPersonAdd className="text-primary" size={28} />
                   </div>
                 </NavLink>
               </div>
-              <div className="col-md-5  p-3">
+              <div className="col-4  p-3">
                 <NavLink
                   to="/pos/main/crm/customers"
                   className="nav-link"
                   aria-current="page"
                 >
-                  <div className="ms-3">
+                  <div className="d-flex align-items-center flex-column">
                     <h6>SHOW ALL CUSTOMER</h6>
-                    <FaUsers className="text-primary ms-5" size={29} />
+                    <FaUsers className="text-primary " size={29} />
                   </div>
                 </NavLink>
               </div>
