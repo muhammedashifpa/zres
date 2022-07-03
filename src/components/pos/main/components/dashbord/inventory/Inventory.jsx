@@ -1,5 +1,15 @@
 import React from 'react'
-import Announcement from '../sales/components/Announcement'
+import LowStockIngredients from './components/LowStockIngredients'
+import LowStocksFinishedGoods from './components/LowStocksFinishedGoods'
+import NoOfCoversServed from './components/NoOfCoversServed'
+import StockOnHand from './components/StockOnHand'
+import StockTakes from './components/StockTakes'
+import TopInventoryModifire from './components/TopInventoryModifire'
+import TopPaidModifires from './components/TopPaidModifires'
+import TopProfitableItems from './components/TopProfitableItems'
+import TotalCogs from './components/TotalCogs'
+import TotalPurchase from './components/TotalPurchase'
+import WastageCost from './components/WastageCost'
 
 const Inventory = () => {
   return (
@@ -7,13 +17,13 @@ const Inventory = () => {
       {/* *********************** row ************************ */}
       <div className="row my-3">
         <div className="col-4">
-          <Announcement/>
+          <StockOnHand/>
         </div>
         <div className="col-4 px-0">
-          <Announcement/>
+          <WastageCost/>
         </div>
         <div className="col-4 ">
-          <Announcement/>
+          <TotalCogs/>
         </div>
       </div>
       {/* ------------------------ row ------------------------ */}
@@ -21,36 +31,36 @@ const Inventory = () => {
       {/* *********************** row ************************ */}
       <div className="row my-3">
         <div className="col-4">
-          <Announcement/>
+          <TotalPurchase/>
         </div>
         <div className="col-4 px-0">
-          <Announcement/>
+          <StockTakes/>
         </div>
         <div className="col-4 ">
-          <Announcement/>
+          <LowStocksFinishedGoods/>
         </div>
       </div>
       {/* ------------------------ row ------------------------ */}
             {/* *********************** row ************************ */}
       <div className="row my-3">
         <div className="col-4  ">
-          <Announcement/>
+          <TopProfitableItems/>
         </div>
         <div className="col-8  ">
           <div className="row mb-2">
             <div className="col-6 px-0 ">
-            <Announcement/>
+              <LowStockIngredients/>
             </div>
             <div className="col-6 ">
-            <Announcement/>
+              <TopInventoryModifire/>
             </div>
           </div>
           <div className="row">
             <div className="col-6 px-0  ">
-              <Announcement/>
+              <NoOfCoversServed/>
             </div>
             <div className="col-6  ">
-            <Announcement/>
+            <TopPaidModifires/>
             </div>
           </div>
         </div>

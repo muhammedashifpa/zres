@@ -1,5 +1,17 @@
 import React from 'react'
-import Announcement from '../sales/components/Announcement';
+import CancelledItems from './components/CancelledItems';
+import DeliveryReports from './components/DeliveryReports';
+import InActiveCustomers from './components/InActiveCustomers';
+import NewCustomers from './components/NewCustomers';
+import NoOfCoversServed from './components/NoOfCoversServed';
+import TableWiseSalesReport from './components/TableWiseSalesReport';
+import TopComboItems from './components/TopComboItems';
+import TopCustomers from './components/TopCustomers';
+import TopModifiers from './components/TopModifiers';
+import TopPaidModifires from './components/TopPaidModifires';
+import TotalDiscount from './components/TotalDiscount';
+import TotalSurcharges from './components/TotalSurcharges';
+import WhatHappening from './components/WhatHappening';
 
 const Marketing = () => {
   return (
@@ -9,29 +21,29 @@ const Marketing = () => {
         <div className="col-8  ">
           <div className="row mb-2">
             <div className="col-4  ">
-              <Announcement/>
+              <CancelledItems/>
             </div>
             <div className="col-4 ps-0 ">
-            <Announcement/>
+            <NewCustomers/>
             </div>
             <div className="col-4 px-0 ">
-            <Announcement/>
+            <TotalSurcharges/>
             </div>
           </div>
           <div className="row">
             <div className="col-4  ">
-              <Announcement/>
+              <TotalDiscount/>
             </div>
             <div className="col-4 ps-0 ">
-            <Announcement/>
+            <DeliveryReports/>
             </div>
             <div className="col-4 px-0 ">
-            <Announcement/>
+            <InActiveCustomers/>
             </div>
           </div>
         </div>
         <div className="col-4  ">
-          <Announcement/>
+          <WhatHappening/>
         </div>
       </div>
       {/* ------------------------ row ------------------------ */}
@@ -39,13 +51,13 @@ const Marketing = () => {
       {/* *********************** row ************************ */}
       <div className="row my-3">
         <div className="col-4">
-          <Announcement/>
+          <TopComboItems/>
         </div>
         <div className="col-4 px-0">
-          <Announcement/>
+          <TopCustomers/>
         </div>
         <div className="col-4 ">
-          <Announcement/>
+          <TopModifiers/>
         </div>
       </div>
       {/* ------------------------ row ------------------------ */}
@@ -53,13 +65,13 @@ const Marketing = () => {
       {/* *********************** row ************************ */}
       <div className="row my-3">
         <div className="col-4">
-          <Announcement/>
+          <TableWiseSalesReport/>
         </div>
         <div className="col-4 px-0">
-          <Announcement/>
+          <NoOfCoversServed/>
         </div>
         <div className="col-4 ">
-          <Announcement/>
+          <TopPaidModifires/>
         </div>
       </div>
       {/* ------------------------ row ------------------------ */}
