@@ -7,4 +7,4 @@ const WalkIn = () => {
   );
 }
 
-export default WalkIn
+export default WalkIn 

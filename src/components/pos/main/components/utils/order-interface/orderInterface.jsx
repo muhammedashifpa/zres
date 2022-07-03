@@ -43,25 +43,25 @@ const OrderInterfaceOuter = styled.div`
 
 const tableDetails = [
   {
-    name: "jack",
+    name: "Burger",
     quantity: "3",
     price: 150,
     SubTotal: 500,
   },
   {
-    name: "Jill",
+    name: "pizza",
     quantity: "3",
     price: 150,
     SubTotal: 500,
   },
   {
-    name: "sumesh",
+    name: "shawarma",
     quantity: "3",
     price: 150,
     SubTotal: 500,
   },
   {
-    name: "ramesh",
+    name: "Pista",
     quantity: "3",
     price: 150,
     SubTotal: 500,
