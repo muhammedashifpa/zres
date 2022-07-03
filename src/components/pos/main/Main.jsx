@@ -18,8 +18,8 @@ export default Main
 
 const MainWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 6fr;
-  column-gap: 1rem;
+  grid-template-columns: 1fr 8fr;
+  /* column-gap: 1rem; */
   height: 100vh;
 `
 const OutletWrapper = styled.div`

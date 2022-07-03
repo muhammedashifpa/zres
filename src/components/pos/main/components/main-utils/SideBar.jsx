@@ -101,7 +101,7 @@ const NavData = [
     {
         key:1,
         name:'Dashboard',
-        link:'dashbord/sales',
+        link:'dashbord',
         icon:<BsFillHouseDoorFill/>,
     },
     {

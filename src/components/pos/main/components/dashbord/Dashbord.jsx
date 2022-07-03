@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import { Navigate, Route, Routes, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import Tabs from '../../../../utils/tabs/Tabs'
 import BusinessSummary from './business-summary/BusinessSummary'
 import Inventory from './inventory/Inventory'
 import Marketing from './marketing/Marketing'
 import Sales from './sales/Sales'
+import OrderTypeAndDurationHeader from './utils/OrderTypeAndDurationHeader'
 
 const Dashbord = () => {
   const navigate = useNavigate()
@@ -20,8 +21,10 @@ const Dashbord = () => {
     <div>
       <Tabs data={TabData} active={activeTab} activeTabHandler={activeTabHandler}/>
       <ContentWrapper className='py-3'>
+        <OrderTypeAndDurationHeader/>
         <Routes>
-          <Route path='sales' element={<Sales/>}/>
+          <Route  path='' element={<Navigate to='sales'/>}/>
+          <Route index path='sales' element={<Sales/>}/>
           <Route path='marketing' element={<Marketing/>}/>
           <Route path='inventory' element={<Inventory/>}/>
           <Route path='business-summary' element={<BusinessSummary/>}/>

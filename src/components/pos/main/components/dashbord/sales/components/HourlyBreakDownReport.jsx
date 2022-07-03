@@ -1,5 +1,5 @@
 import React from 'react'
-import CardWrapper from './utils/CardWrapper'
+import CardWrapper from '../../utils/CardWrapper'
 
 const HourlyBreakDownReport = () => {
   return (

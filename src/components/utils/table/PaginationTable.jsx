@@ -15,7 +15,7 @@ const columns = [
   {
     id: "CustomerName",
     label: "Customer Name",
-    minWidth: 170,
+    maxWidth: 100,
     align: "center",
   },
   {
@@ -39,13 +39,13 @@ const columns = [
   {
     id: "Status",
     label: "Status",
-    minWidth: 170,
+    maxWidth: 100,
     align: "center",
   },
   {
     id: "LoyalityCustomer",
     label: "Loyality Customer",
-    minWidth: 170,
+    maxWidth: 100,
     align: "center",
   },
 ];
