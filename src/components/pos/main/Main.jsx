@@ -8,7 +8,7 @@ const Main = () => {
   return (
     <MainWrapper className=''>
       <SideBar/>
-      <OutletWrapper className='p-3 bg-light'>
+      <OutletWrapper className='p-3 bg-secondary bg-opacity-25'>
         <Outlet/>
       </OutletWrapper>
     </MainWrapper>
