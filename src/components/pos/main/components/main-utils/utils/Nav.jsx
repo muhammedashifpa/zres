@@ -11,7 +11,7 @@ const Nav = (props) => {
             props.data&&props.data.map(item=>{
                 return(
                     <ListWrapper className="nav-item" key={item.key}>
-                    <NavLink to={item.link} className="nav-link" aria-current="page">
+                    <NavLink end to={item.link} className="nav-link" aria-current="page">
                       {item.icon}
                       {item.name}
                     </NavLink>

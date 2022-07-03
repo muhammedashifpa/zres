@@ -1,8 +1,9 @@
 import React from 'react'
+import CardWrapper from './utils/CardWrapper'
 
 const ModificationandReprint = () => {
   return (
-    <div>ModificationandReprint</div>
+    <CardWrapper title='ModificationandReprint' className='px-0'>ModificationandReprint</CardWrapper>
   )
 }
 
