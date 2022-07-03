@@ -5,8 +5,8 @@ import styled from 'styled-components';
 const Spinner = () => {
   return (
     <ModalOverlayWrapper>
-        <div class="spinner-border text-primary" role="status" style={{width: '5rem', height: '5rem'}}>
-            <span class="visually-hidden" >Loading...</span>
+        <div className="spinner-border text-primary" role="status" style={{width: '5rem', height: '5rem'}}>
+            <span className="visually-hidden" >Loading...</span>
         </div>
     </ModalOverlayWrapper>
   )
