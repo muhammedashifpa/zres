@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-export const WalkinBottomButtons = () => {
+export const OrderInterfaceBottomButtons = () => {
   return (
     <Wraper>
       <div className="nav bg-light shadow px-3 py-2 mx-2 mt-3 ">

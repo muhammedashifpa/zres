@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../../../../../../utils/button/Button'
 
 export const LeftTable = ({tableData}) => {
   console.log("tableData",tableData);
@@ -10,6 +11,7 @@ export const LeftTable = ({tableData}) => {
           <th scope="col">Qty</th>
           <th scope="col">Price</th>
           <th scope="col">Subtotal</th>
+          <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
@@ -20,6 +22,7 @@ export const LeftTable = ({tableData}) => {
               <td>{data.quantity}</td>
               <td>{data.price}</td>
               <td>{data.SubTotal}</td>
+              <td><Button className='btn-danger' name='x'/></td>
             </tr>
           ))}
       </tbody>

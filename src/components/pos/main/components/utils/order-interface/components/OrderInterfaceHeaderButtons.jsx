@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import { BsFillTagFill, BsPlusLg } from "react-icons/bs";
 
-export const WalkinHeaderButtons = () => {
+export const OrderInterfaceHeaderButtons = () => {
   return (
     <Wraper>
       <div className="nav bg-light shadow px-3 py-2 mt-5 mx-2">

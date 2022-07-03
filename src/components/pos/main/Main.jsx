@@ -25,4 +25,5 @@ const MainWrapper = styled.div`
 `
 const OutletWrapper = styled.div`
   /* padding: 1rem; */
+  overflow-y:scroll;
 `
