@@ -1,21 +1,48 @@
 import React from 'react'
 import styled from 'styled-components';
+import { useState } from 'react';
+import Modal from '../../../../../../utils/Modal/Modal';
+import { ButtonPopUp } from './orderingInterface/components/ButtonPopUp';
 
 export const OrderInterfaceBottomButtons = () => {
-  return (
-    <Wraper>
-      <div className="nav bg-light shadow px-3 py-2 mx-2 mt-3 ">
-        <div className="buttons w-100 d-flex ">
-          <div className="">
-            <button className="btn btn-food px-4 py-2 mx-1">Cancel</button>
-            <button className="btn btn-beverage px-4 py-2 mx-1 ">Slip Check</button>
+  const [modalOpen, setModalOpen] = useState(false);
+  const [paymentBtn, setPaymentBtn] = useState(false);
 
-            <button className="btn btn-notes px-4 py-2 mx-1"> Loyality</button>
-            <button className="btn btn-Order px-4 py-2  mx-1">Payment</button>
+  const closeHandler = () => {
+    setModalOpen(false);
+  };
+
+  const paymentHandler = () => {
+    setModalOpen(true);
+    setPaymentBtn(true);
+  };
+
+  return (
+    <>
+      <Wraper>
+        <div className="nav bg-light shadow px-3 py-2 mx-2 mt-3 ">
+          <div className="buttons w-100 d-flex ">
+            <div className="">
+              <button className="btn btn-food px-4 py-2 mx-1">Cancel</button>
+              <button className="btn btn-beverage px-4 py-2 mx-1 ">Slip Check</button>
+
+              <button className="btn btn-notes px-4 py-2 mx-1"> Loyality</button>
+              <button onClick={paymentHandler} className="btn btn-Order px-4 py-2  mx-1">Payment</button>
+            </div>
           </div>
         </div>
-      </div>
-    </Wraper>
+      </Wraper>
+      {modalOpen && (
+        <Modal
+          element={
+            <ButtonPopUp
+              name={paymentBtn ? "Payment" : setModalOpen(false)}
+            />
+          }
+          onClose={closeHandler}
+        />
+      )}
+    </>
   );
 }
 
