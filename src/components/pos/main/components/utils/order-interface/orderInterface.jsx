@@ -11,9 +11,9 @@ const OrderInterface = () => {
     return (
         <OrderInterfaceOuter className="py-3">
           <OrderInterfaceHeaderButtons />
-          <div className="mainSection row d-flex justify-content-between mx-2 mt-2">
+          <div className="mainSection row d-flex justify-content-between mx-1 mt-2">
             <div className="left col-6 p-2 mt-2">
-                <div className="bg-light p-4">
+                <div className=" left bg-light p-4">
                     <LeftHead />
                     <hr />
                     <LeftTable tableData={tableDetails} />
@@ -22,7 +22,7 @@ const OrderInterface = () => {
                 </div>
             </div>
             <div className="right col-6 p-2 mt-2">
-                <div className="bg-light p-4">
+                <div className="right bg-light p-4">
                     <RightSide />
                 </div>
             </div>
@@ -38,6 +38,9 @@ export default OrderInterface
 
 const OrderInterfaceOuter = styled.div`
   background: rgba(102, 100, 100, 0.12);
+  .left ,.right{
+    border-radius: 5px;;
+  }
 `;
 
 

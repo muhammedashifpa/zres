@@ -31,6 +31,7 @@ export const OrderInterfaceHeaderButtons = () => {
 
   
   return (
+    <>
     <Wraper>
       <div className="nav bg-light shadow px-3 py-2 mt-5 mx-2">
         <div className="buttons w-100 d-flex justify-content-between align-items-center">
@@ -55,6 +56,7 @@ export const OrderInterfaceHeaderButtons = () => {
           </div>
         </div>
       </div>
+    </Wraper>
       {modalOpen && (
         <Modal
           element={
@@ -65,15 +67,17 @@ export const OrderInterfaceHeaderButtons = () => {
           onClose={closeHandler}
         />
       )}
-    </Wraper>
+  </>
   );
 }
 const Wraper = styled.div`
   .nav {
-    border-radius: 20px;
+    border-radius: 5px;
     button {
       margin-right: 10px;
       font-size: 12px;
+      border-radius: 5px !important;
+
     }
     .btn-food {
       background: #e1870e;

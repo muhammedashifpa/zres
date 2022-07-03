@@ -21,10 +21,12 @@ export const OrderInterfaceBottomButtons = () => {
 
 const Wraper = styled.div`
   .nav {
-    border-radius: 20px;
+    border-radius: 5px;
     button {
       margin-right: 10px;
       font-size: 12px;
+      border-radius: 5px !important;
+
     }
     .btn-food {
       background: #e1870e;
