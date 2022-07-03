@@ -31,7 +31,7 @@ const ModalOverlayWrapper = styled.div`
     transform: translate(-50%, -50%);
     overflow: hidden;
     z-index: 11;
-    width: 350px;
+    width: auto;
     .btn-close{
         top:10px;
         right: 10px;
