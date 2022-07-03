@@ -6,6 +6,7 @@ import BusinessSummary from './business-summary/BusinessSummary'
 import Inventory from './inventory/Inventory'
 import Marketing from './marketing/Marketing'
 import Sales from './sales/Sales'
+import OrderTypeAndDurationHeader from './utils/OrderTypeAndDurationHeader'
 
 const Dashbord = () => {
   const navigate = useNavigate()
@@ -20,6 +21,7 @@ const Dashbord = () => {
     <div>
       <Tabs data={TabData} active={activeTab} activeTabHandler={activeTabHandler}/>
       <ContentWrapper className='py-3'>
+        <OrderTypeAndDurationHeader/>
         <Routes>
           <Route  path='' element={<Navigate to='sales'/>}/>
           <Route index path='sales' element={<Sales/>}/>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Button from '../../../../../utils/button/Button'
 import styled from 'styled-components'
-import CardWrapper from '../sales/components/utils/CardWrapper'
+import CardWrapper from './CardWrapper'
 import  ReactDOM from 'react-dom';
 import Backdrop from '../../../../../utils/Modal/utils/Backdrop';
 
