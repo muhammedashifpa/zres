@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import Modal from '../../../../../../utils/Modal/Modal';
 import { ButtonPopUp } from './orderingInterface/components/ButtonPopUp';
-import { PaymentRedeem } from './paymentRedeem/PaymentRedeem';
 
 export const OrderInterfaceBottomButtons = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [paymentBtn, setPaymentBtn] = useState(false);
+  const [slipcheck, setSlipCheck] = useState(false);
 
   const closeHandler = () => {
     setModalOpen(false);
@@ -16,7 +16,14 @@ export const OrderInterfaceBottomButtons = () => {
   const paymentHandler = () => {
     setModalOpen(true);
     setPaymentBtn(true);
+    setSlipCheck(false);
   };
+
+  const SlipCheck = () => {
+    setModalOpen(true);
+    setSlipCheck(true)
+    setPaymentBtn(false);
+  }
 
   return (
     <>
@@ -25,7 +32,7 @@ export const OrderInterfaceBottomButtons = () => {
           <div className="buttons w-100 d-flex ">
             <div className="">
               <button className="btn btn-food px-4 py-2 mx-1">Cancel</button>
-              <button className="btn btn-beverage px-4 py-2 mx-1 ">Slip Check</button>
+              <button onClick={SlipCheck} className="btn btn-beverage px-4 py-2 mx-1 ">Slip Check</button>
 
               <button className="btn btn-notes px-4 py-2 mx-1"> Loyality</button>
               <button onClick={paymentHandler} className="btn btn-Order px-4 py-2  mx-1">Payment</button>
@@ -38,7 +45,7 @@ export const OrderInterfaceBottomButtons = () => {
         <Modal
           element={
             <ButtonPopUp
-              name={paymentBtn ? "Payment" : setModalOpen(false)}
+              name={paymentBtn ? "Payment" : slipcheck ? "slip check" : setModalOpen(false)}
             />
           }
           onClose={closeHandler}
