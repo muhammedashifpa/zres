@@ -1,48 +1,41 @@
 import React from 'react'
 import styled from 'styled-components';
+import Button from '../../../utils/button/Button';
+import { useNavigate} from 'react-router-dom'
 
-const OrderTaking = true;
 
-export const OrderOptionForModal = () => {
+export const OrderOptionForModal = (props) => {
+  const navigate = useNavigate()
   return (
-    <OrderOptions>
-      {!OrderTaking === true ? (
+    <OrderOptions className='py-5'>
+      {props.options === 'order-taking-options' ? (
         <>
           {/* <h5 className="">Order Taking Options</h5> */}
           <div className="buttons mt-3">
-            <button type="button" className="btn btn-warning d-block mx-auto my-1">
-              Existing Check
-            </button>
-            <button type="button" className="btn btn-warning d-block mx-auto my-1">
-              New Check
-            </button>
-            <button type="button" className="btn btn-success d-block mx-auto my-1">
-              Walk-In
-            </button>
-            <button type="button" className="btn btn-success d-block mx-auto my-1">
-              Dine-In
-            </button>
-            <button type="button" className="btn btn-success d-block mx-auto my-1">
-              Take Away
-            </button>
-            <button type="button" className="btn btn-danger d-block mx-auto my-1">
-              Delivery
-            </button>
+            <Button name='Existing Check'
+              className='btn-warning d-block mx-auto my-1 py-3'
+              onClick={()=>navigate('/pos/main')}/>
+            <Button name='Walk-In' 
+              className='btn-success d-block mx-auto my-1 py-3' 
+              onClick={()=>navigate('/pos/main/walk-in')}/>
+            <Button name='Dine-In' 
+              className='btn-success d-block mx-auto my-1 py-3' 
+              onClick={()=>navigate('/pos/main/dine-in')}/>
+            <Button name='Take Away' 
+              className='btn-success d-block mx-auto my-1 py-3' 
+              onClick={()=>navigate('/pos/main/take-away')}/>
+            <Button name='Delivery' 
+              className='btn-danger d-block mx-auto my-1 py-3' 
+              onClick={()=>navigate('/pos/main/delivery')}/>
           </div>
         </>
       ) : (
         <>
           {/* <h5 className="">Main Options</h5> */}
           <div className="buttons mt-3">
-            <button type="button" className="btn btn-warning d-block mx-auto my-1">
-              Inventory
-            </button>
-            <button type="button" className="btn btn-warning d-block mx-auto my-1">
-              CRM
-            </button>
-            <button type="button" className="btn btn-primary d-block mx-auto my-1">
-              Accounts
-            </button>
+            <Button name='Inventory' className='btn-warning d-block mx-auto my-1 py-3' onClick={()=>navigate('/pos/main/invetory')}/>
+            <Button name='CRM' className='btn-warning d-block mx-auto my-1 py-3' onClick={()=>navigate('/pos/main/crm')}/>
+            <Button name='Accounts' className='btn-success d-block mx-auto my-1 py-3' onClick={()=>navigate('/pos/main/accounts')}/>
           </div>
         </>
       )}
@@ -51,20 +44,8 @@ export const OrderOptionForModal = () => {
 }
 
 const OrderOptions = styled.div`
-  /* height: 400px;
-  background: white;
-  border-radius: 20px;
-  padding-top: 50px;
-  box-shadow: 0px 0px 6px 0px rgba(151, 146, 146, 0.75);
-  h5 {
-    color: #040153;
-    margin-bottom: 30px;
-  }
-  button {
-    color: black;
+  .btn{
     width: 200px;
+    padding: 1rem auto;
   }
-  button:hover {
-    color: white;
-  } */
 `;

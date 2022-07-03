@@ -4,15 +4,14 @@ import Modal from '../../../utils/Modal/Modal';
 import { OrderOptionForModal } from './OrderOptionForModal';
 
 const OrderTakingOption = () => {
-  const [modalOpen,setModalOpen] = useState();
+  const [modalOpen,setModalOpen] = useState(false);
 
   const closeHandler = () => {
-    setModalOpen(null)
+    setModalOpen(false)
   }
 
   const openHandler = () => {
     setModalOpen(true)
-    console.log(setModalOpen(true))
   }
   return (
     <>
@@ -21,7 +20,7 @@ const OrderTakingOption = () => {
     </OrderOptions>
       {modalOpen&&<Modal 
       title={'Order Taking Options'}
-      element={<OrderOptionForModal/>}
+      element={<OrderOptionForModal options='order-taking-options'/>}
       onClose={closeHandler}
       />}
     </>

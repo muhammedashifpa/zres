@@ -9,7 +9,7 @@ import Spinner from './utils/Spinner';
 const FullLoading = (props) => { 
   return (
     <>
-        {props.loading&&ReactDOM.createPortal(
+        {ReactDOM.createPortal(
             <Backdrop>
                 <Spinner/>
             </Backdrop>,

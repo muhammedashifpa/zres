@@ -6,9 +6,11 @@ import SideBar from './components/main-utils/SideBar';
 const Main = () => {
   console.log('SideBar')
   return (
-    <MainWrapper className='p-3'>
+    <MainWrapper className=''>
       <SideBar/>
-      <Outlet/>
+      <OutletWrapper className='p-3 bg-secondary bg-opacity-25'>
+        <Outlet/>
+      </OutletWrapper>
     </MainWrapper>
   )
 }
@@ -20,4 +22,8 @@ const MainWrapper = styled.div`
   grid-template-columns: 1fr 6fr;
   column-gap: 1rem;
   height: 100vh;
+`
+const OutletWrapper = styled.div`
+  /* padding: 1rem; */
+  overflow-y:scroll;
 `

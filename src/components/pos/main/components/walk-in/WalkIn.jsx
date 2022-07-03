@@ -1,9 +1,10 @@
 import React from 'react'
+import OrderInterface from '../utils/order-interface/OrderInterface';
 
 const WalkIn = () => {
   return (
-    <div>WalkIn</div>
-  )
+    <OrderInterface/>
+  );
 }
 
 export default WalkIn 
