@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import SideBar from './components/main-utils/SideBar';
 
 const Main = () => {
-  console.log('SideBar')
   return (
     <MainWrapper className=''>
       <SideBar/>

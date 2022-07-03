@@ -7,7 +7,6 @@ const Tabs = (props) => {
         active,
         activeTabHandler
     }=props;
-    console.log(active)
   return (
     <UlWrapper className="nav nav-tabs">
         {data&&data.map(item=>{

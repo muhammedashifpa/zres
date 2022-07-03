@@ -21,19 +21,19 @@ const Sales = () => {
       <OrderTypeAndDurationHeader/>
       <GridWrapper className='container'>
         {/* *********************** row ************************ */}
-        <div class="row my-3">
-          <div class="col-12  ">
+        <div className="row my-3">
+          <div className="col-12  ">
             <MainGraph/>
           </div>
         </div>
         {/* ------------------------ row ------------------------ */}
 
         {/* *********************** row ************************ */}
-        <div class="row my-3">
-          <div class="col-4">
+        <div className="row my-3">
+          <div className="col-4">
             <Announcement/>
           </div>
-          <div class="col-4 ">
+          <div className="col-4 ">
             {/* ****** row ****** */}
             <div className='row mb-3'>
               <TotalSales/>
@@ -46,32 +46,32 @@ const Sales = () => {
             </div>
             {/* ------ row ------ */}
           </div>
-          <div class="col-4 ">
+          <div className="col-4 ">
             <ChartofSales/>
           </div>
         </div>
         {/* ------------------------ row ------------------------ */}
 
         {/* *********************** row ************************ */}
-        <div class="row my-3">
-          <div class="col-4">
+        <div className="row my-3">
+          <div className="col-4">
             <OrderByLocation/>
           </div>
-          <div class="col-4 px-0">
+          <div className="col-4 px-0">
             <TopSellingItem/>
           </div>
-          <div class="col-4 ">
+          <div className="col-4 ">
             <SalesByLocation/>
           </div>
         </div>
         {/* ------------------------ row ------------------------ */}
 
         {/* *********************** row ************************ */}
-        <div class="row my-3">
-          <div class="col-4">
+        <div className="row my-3">
+          <div className="col-4">
             <StaffWiseReport/>
           </div>
-          <div class="col-4 ">
+          <div className="col-4 ">
             {/* ****** row ****** */}
             <div className='row mb-3'>
               <HourlyBreakDownReport/>
@@ -89,7 +89,7 @@ const Sales = () => {
             </div>
             {/* ------ row ------ */}
           </div>
-          <div class="col-4 ">
+          <div className="col-4 ">
             <TopGrossingItems/>
           </div>
         </div>
