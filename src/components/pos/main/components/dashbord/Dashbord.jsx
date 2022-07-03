@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import { Navigate, Route, Routes, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import Tabs from '../../../../utils/tabs/Tabs'
 import BusinessSummary from './business-summary/BusinessSummary'
@@ -21,7 +21,8 @@ const Dashbord = () => {
       <Tabs data={TabData} active={activeTab} activeTabHandler={activeTabHandler}/>
       <ContentWrapper className='py-3'>
         <Routes>
-          <Route path='sales' element={<Sales/>}/>
+          <Route  path='' element={<Navigate to='sales'/>}/>
+          <Route index path='sales' element={<Sales/>}/>
           <Route path='marketing' element={<Marketing/>}/>
           <Route path='inventory' element={<Inventory/>}/>
           <Route path='business-summary' element={<BusinessSummary/>}/>
