@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import Modal from '../../../../../../utils/Modal/Modal';
 import { ButtonPopUp } from './orderingInterface/components/ButtonPopUp';
+import { PaymentRedeem } from './paymentRedeem/PaymentRedeem';
 
 export const OrderInterfaceBottomButtons = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -32,6 +33,7 @@ export const OrderInterfaceBottomButtons = () => {
           </div>
         </div>
       </Wraper>
+      
       {modalOpen && (
         <Modal
           element={
