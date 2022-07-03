@@ -1,8 +1,9 @@
 import React from 'react'
+import CardWrapper from './utils/CardWrapper'
 
 const Announcement = () => {
   return (
-    <div>Announcement</div>
+    <CardWrapper title='Announcement'>Announcement</CardWrapper>
   )
 }
 

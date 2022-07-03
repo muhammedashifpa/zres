@@ -1,8 +1,9 @@
 import React from 'react'
+import CardWrapper from './utils/CardWrapper'
 
 const TotalSales = () => {
   return (
-    <div>TotalSales</div>
+    <CardWrapper title='Total Sales' className='px-0'>TotalSales</CardWrapper>
   )
 }
 

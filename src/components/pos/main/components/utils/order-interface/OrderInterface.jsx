@@ -39,6 +39,9 @@ export default OrderInterface
 
 const OrderInterfaceOuter = styled.div`
   background: rgba(102, 100, 100, 0.12);
+  .left ,.right{
+    border-radius: 5px;;
+  }
 `;
 
 

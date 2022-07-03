@@ -1,8 +1,9 @@
 import React from 'react'
+import CardWrapper from './utils/CardWrapper'
 
 const ChartofSales = () => {
   return (
-    <div>ChartofSales</div>
+    <CardWrapper title='Chart of Sales' >ChartofSales</CardWrapper>
   )
 }
 
