@@ -1,5 +1,4 @@
 import React from 'react'
-import Announcement from '../sales/components/Announcement';
 import CancelledItems from './components/CancelledItems';
 import DeliveryReports from './components/DeliveryReports';
 import InActiveCustomers from './components/InActiveCustomers';

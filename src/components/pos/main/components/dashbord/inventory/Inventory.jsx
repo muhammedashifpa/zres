@@ -1,5 +1,4 @@
 import React from 'react'
-import Announcement from '../sales/components/Announcement'
 import LowStockIngredients from './components/LowStockIngredients'
 import LowStocksFinishedGoods from './components/LowStocksFinishedGoods'
 import NoOfCoversServed from './components/NoOfCoversServed'
