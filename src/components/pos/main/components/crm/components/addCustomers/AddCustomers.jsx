@@ -27,7 +27,6 @@ const AddCustomers = () => {
       <AddCustomerWrapper onSubmit={formsubmitHandler} >
         <Header
           title={"Create New Customer"}
-          subtitle={"General Information"}
         />
         <GeneralInformation
           onDeleveryHandler={delveryhandler}
@@ -65,6 +64,5 @@ const ButtonWrapper = styled.div`
   button {
     margin-right: 10px;
   }
-
   `;
 export default AddCustomers;
