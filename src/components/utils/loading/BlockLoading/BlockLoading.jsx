@@ -1,15 +1,23 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const BlockLoading = (props) => {
   return (
-    <div class="text-center my-5">
-        <div class="spinner-border text-primary"  style={{width: '3rem', height: '3rem'}}>
-            <span class="visually-hidden">Loading...</span>
+    <Wrapper className="text-center">
+        <div className="spinner-border text-primary"  style={{width: '3rem', height: '3rem'}}>
+            <span className="visually-hidden">Loading...</span>
         </div>
-    </div>
+    </Wrapper>
   )
 }
 
 export default BlockLoading
+
+const Wrapper = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 

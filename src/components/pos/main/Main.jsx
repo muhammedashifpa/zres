@@ -4,11 +4,10 @@ import styled from 'styled-components';
 import SideBar from './components/main-utils/SideBar';
 
 const Main = () => {
-  console.log('SideBar')
   return (
-    <MainWrapper className='p-3'>
+    <MainWrapper className=''>
       <SideBar/>
-      <OutletWrapper className='p-3 bg-light'>
+      <OutletWrapper className='p-3 bg-secondary bg-opacity-25'>
         <Outlet/>
       </OutletWrapper>
     </MainWrapper>
@@ -19,10 +18,11 @@ export default Main
 
 const MainWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 6fr;
-  column-gap: 1rem;
+  grid-template-columns: 1fr 8fr;
+  /* column-gap: 1rem; */
   height: 100vh;
 `
 const OutletWrapper = styled.div`
   /* padding: 1rem; */
+  overflow-y:scroll;
 `

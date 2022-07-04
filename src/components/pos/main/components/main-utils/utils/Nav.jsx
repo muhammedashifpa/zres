@@ -11,7 +11,7 @@ const Nav = (props) => {
             props.data&&props.data.map(item=>{
                 return(
                     <ListWrapper className="nav-item" key={item.key}>
-                    <NavLink to={item.link} className="nav-link" aria-current="page">
+                    <NavLink to={`${item.link}`} className="nav-link text-center" aria-current="page">
                       {item.icon}
                       {item.name}
                     </NavLink>
@@ -32,8 +32,8 @@ const ListWrapper = styled.li`
         align-items: center;
         font-size: .8rem;
         svg{
-            font-size: 1.5rem;
-            margin-bottom: .5rem;
+            font-size: 1.2rem;
+            margin-bottom: .4rem;
         }
     }
 `

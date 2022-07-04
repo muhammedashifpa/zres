@@ -10,6 +10,7 @@ import TableRow from "@mui/material/TableRow";
 
 import { TiTick,TiTimes,TiWarning } from "react-icons/ti";
 
+
 const PaginationTable = ({columnTitle,data}) => {
   /*columnTitle:[{
     value:"Title Column"
@@ -19,6 +20,7 @@ const PaginationTable = ({columnTitle,data}) => {
   /*data:[{
     uniqueid:"value"
   }]*/
+
 
 
   const [page, setPage] = React.useState(0);
