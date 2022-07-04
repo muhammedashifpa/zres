@@ -5,20 +5,14 @@ import styled from 'styled-components';
 
 const ModalOverlay = (props) => {
   return (
-    <>
-      <div className="col-4">
-        <ModalOverlayWrapper className="card">
-          <button
-            type="button"
-            className="btn-close position-absolute"
-            onClick={props.onClose}
-          ></button>
-          {props.title && <h5 className="card-header text-center fw-bold">{props.title}</h5>}
-          <div className="card-body text-center">{props.children}</div>
-        </ModalOverlayWrapper>
-      </div>
-    </>
-  );
+    <ModalOverlayWrapper className='card'>
+        <button type="button" class="btn-close position-absolute" onClick={props.onClose}></button>
+       {props.title&&<h5 class="card-header text-center fw-bold">{props.title}</h5>}
+        <div class="card-body px-5">
+            {props.children}
+        </div>
+    </ModalOverlayWrapper>
+  )
 }
 
 export default ModalOverlay;
@@ -31,7 +25,7 @@ const ModalOverlayWrapper = styled.div`
     transform: translate(-50%, -50%);
     overflow: hidden;
     z-index: 11;
-    width: auto;
+    min-width: 350px;
     .btn-close{
         top:10px;
         right: 10px;
