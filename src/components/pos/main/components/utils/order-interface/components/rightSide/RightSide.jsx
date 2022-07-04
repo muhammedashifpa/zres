@@ -12,8 +12,8 @@ export const RightSide = () => {
         <Categories className="categories mt-5">
           <div className="bottons text-center">
             {categoriesBtn &&
-              categoriesBtn.map((button) =>
-                <button className="btn shadow  py-4 mx-2 my-2 text-center" style={{background: button.gradient}}>{button.name}</button>
+              categoriesBtn.map((button,index) =>
+                <button key={index} className="btn shadow  py-4 mx-2 my-2 text-center" style={{background: button.gradient}}>{button.name}</button>
               )}
           </div>
         </Categories>
