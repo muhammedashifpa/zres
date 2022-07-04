@@ -32,8 +32,8 @@ const ListWrapper = styled.li`
         align-items: center;
         font-size: .8rem;
         svg{
-            font-size: 1.5rem;
-            margin-bottom: .5rem;
+            font-size: 1.2rem;
+            margin-bottom: .4rem;
         }
     }
 `
