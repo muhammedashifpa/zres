@@ -10,83 +10,19 @@ import TableRow from "@mui/material/TableRow";
 
 import { TiTick,TiTimes,TiWarning } from "react-icons/ti";
 
-const columns = [
-  { id: "CustomerId", label: "Customer Id", minWidth: 100, align: "center" },
-  {
-    id: "CustomerName",
-    label: "Customer Name",
-    maxWidth: 100,
-    align: "center",
-  },
-  {
-    id: "Address",
-    label: "Address",
-    minWidth: 170,
-    align: "center",
-  },
-  {
-    id: "EmailId",
-    label: "Email Id",
-    minWidth: 170,
-    align: "center",
-  },
-  {
-    id: "Phone",
-    label: "Phone",
-    minWidth: 170,
-    align: "center",
-  },
-  {
-    id: "Status",
-    label: "Status",
-    maxWidth: 100,
-    align: "center",
-  },
-  {
-    id: "LoyalityCustomer",
-    label: "Loyality Customer",
-    maxWidth: 100,
-    align: "center",
-  },
-];
 
-function createData(
-  CustomerId,
-  CustomerName,
-  Address,
-  EmailId,
-  Phone,
-  LoyalityCustomer,
-  Status
-) {
-  return {
-    CustomerId,
-    CustomerName,
-    Address,
-    EmailId,
-    Phone,
-    LoyalityCustomer,
-    Status,
-  };
-}
+const PaginationTable = ({columnTitle,data}) => {
+  /*columnTitle:[{
+    value:"Title Column"
+    id:"unique_id"
+  }]*/
+   
+  /*data:[{
+    uniqueid:"value"
+  }]*/
 
-const rows = [
-  createData(1, "Axil", "aa", "abu@gami.com", "23423423", "yess", "active"),
-  createData(1, "Axil", "aa", "abu@gami.com", "23423423", "yess", "active"),
-  createData(1, "Axil", "aa", "abu@gami.com", "23423423", "yess", "active"),
-  createData(1, "Axil", "aa", "abu@gami.com", "23423423", "yess", "active"),
-  createData(1, "Axil", "aa", "abu@gami.com", "23423423", "yess", "active"),
-  createData(1, "Axil", "aa", "abu@gami.com", "23423423", "yess", "active"),
-  createData(1, "Axil", "aa", "abu@gami.com", "23423423", "yess", "inactive"),
-  createData(1, "Axil", "aa", "abu@gami.com", "23423423", "yess", "active"),
-  createData(1, "Axil", "aa", "abu@gami.com", "23423423", "yess", "active"),
-  createData(1, "Axil", "aa", "abu@gami.com", "23423423", "yess", "expired"),
-  createData(1, "Axil", "aa", "abu@gami.com", "23423423", "yess", "active"),
-  createData(1, "Axil", "aa", "abu@gami.com", "23423423", "yess", "active"),
-  createData(1, "Axil", "aa", "abu@gami.com", "23423423", "yess", "active"),
-];
 
-const PaginationTable = () => {
+
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -105,10 +41,10 @@ const PaginationTable = () => {
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
-              {columns.map((column) => (
+              {columnTitle.map((column) => (
                 <TableCell
                   key={column.id}
-                  align={column.align}
+                  align={"center"}
                   style={{ minWidth: column.minWidth }}
                 >
                   <p className="text-primary m-1">
@@ -119,15 +55,15 @@ const PaginationTable = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows
+            {data
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                    {columns.map((column) => {
+                    {columnTitle.map((column) => {
                       const value = row[column.id];
                       return (
-                        <TableCell key={column.id} align={column.align}>
+                        <TableCell key={column.id} align="center">
                           {value === "active" ? (
                             <TiTick className="text-success" size={18} />
                           ) : value === "inactive" ? (
@@ -147,7 +83,7 @@ const PaginationTable = () => {
       <TablePagination
         rowsPerPageOptions={[10, 25, 100]}
         component="div"
-        count={rows.length}
+        count={data.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}
