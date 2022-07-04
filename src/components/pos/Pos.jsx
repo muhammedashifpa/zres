@@ -34,4 +34,4 @@ const Pos = () => {
   )
 }
 
-export default Pos
+export default Pos;
