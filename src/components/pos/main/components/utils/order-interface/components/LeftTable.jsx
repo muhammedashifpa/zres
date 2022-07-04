@@ -16,8 +16,8 @@ export const LeftTable = ({tableData}) => {
       </thead>
       <tbody>
         {tableData &&
-          tableData.map((data) => (
-            <tr>
+          tableData.map((data,index) => (
+            <tr key={index}>
               <td>{data.name}</td>
               <td>{data.quantity}</td>
               <td>{data.price}</td>
