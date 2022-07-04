@@ -38,25 +38,21 @@ const TabData = [
   {
     key:1,
     name:'Sales',
-    tabValue:'sales',
     path:'sales'
   },
   {
     key:2,
     name:'Marketing',
-    tabValue:'marketing',
     path:'marketing'
   },
   {
     key:3,
     name:'Inventory',
-    tabValue:'inventory',
     path:'inventory'
   },
   {
     key:4,
     name:'Business Summary',
-    tabValue:'business_summary',
     path:'business-summary'
   },
 ]
