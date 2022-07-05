@@ -4,7 +4,6 @@ import './App.css';
 import {
   Routes,
   Route,
-  Navigate,
 } from "react-router-dom";
 import Pos from './components/pos/Pos';
 import Kds from './components/kds/Kds';
