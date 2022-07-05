@@ -39,13 +39,13 @@ const PaginationTable = ({columnTitle,data}) => {
     <Paper className="mt-4" sx={{ width: "100%", overflow: "hidden" }}>
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
-          <TableHead>
-            <TableRow>
+          <TableHead >
+            <TableRow >
               {columnTitle.map((column) => (
                 <TableCell
                   key={column.id}
                   align={"center"}
-                  style={{ minWidth: column.minWidth }}
+                  style={{ minWidth: column.minWidth,backgroundColor:"#cbc8d5" }}
                 >
                   <p className="text-primary m-1">
                     <strong>{column.label}</strong>
@@ -63,7 +63,7 @@ const PaginationTable = ({columnTitle,data}) => {
                     {columnTitle.map((column) => {
                       const value = row[column.id];
                       return (
-                        <TableCell key={column.id} align="center">
+                        <TableCell  key={column.id} align="center">
                           {value === "active" ? (
                             <TiTick className="text-success" size={18} />
                           ) : value === "inactive" ? (

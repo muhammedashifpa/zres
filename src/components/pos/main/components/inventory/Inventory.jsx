@@ -11,7 +11,7 @@ const Inventory = () => {
   return (
     <Routes>
       <Route path='' element={<InventoryMenuModal/>}/>
-      <Route path='master' element={<Master/>}/>
+      <Route path='master/*' element={<Master/>}/>
       <Route path='transaction' element={<Transaction/>}/>
       <Route path='menu-management' element={<MenuManagement/>}/>
       <Route path='recipe-management' element={<RecipeManagement/>}/>

@@ -1,7 +1,10 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Tabs from "../../../../../../utils/tabs/Tabs";
+import CategoryMaster from "./components/CategoryMaster";
+import MeasurementDetails from "./components/MeasurementDetails";
 import ProductMaster from "./components/ProductMaster";
+import TaxMaster from "./components/TaxMaster";
 
 const Master = () => {
   const TabData = [
@@ -32,7 +35,10 @@ const Master = () => {
      
      <Tabs data={TabData}></Tabs>
       <Routes>
-        <Route path="/master"  />
+        <Route path="product-master" element={<ProductMaster/>}  />
+        <Route path="category-master" element={<CategoryMaster/>}  />
+        <Route path="measurement-details" element={<MeasurementDetails/>}  />
+        <Route path="tax-master" element={<TaxMaster/>}  />
        
       </Routes>
     </>
