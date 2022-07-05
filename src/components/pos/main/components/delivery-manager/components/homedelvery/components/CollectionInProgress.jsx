@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'styled-components';
-import PaginationTable from '../../../../../../utils/table/PaginationTable';
+import styled from 'styled-components'
+import PaginationTable from '../../../../../../../utils/table/PaginationTable'
 
 const CollectionInProgress = ()=> {
   return (

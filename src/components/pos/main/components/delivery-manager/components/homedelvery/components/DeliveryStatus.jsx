@@ -1,12 +1,12 @@
 import React from 'react'
-import styled from "styled-components";
-import PaginationTable from "../../../../../../utils/table/PaginationTable";
+import styled from 'styled-components';
+import PaginationTable from '../../../../../../../utils/table/PaginationTable'
 
-const WaitingForPickup = ()=> {
+const DeliveryStatus = ()=> {
   return (
-    <PickupWrapper>
-        <PaginationTable data={data} columnTitle={columns} />
-    </PickupWrapper>
+    <DeleveryWrapper>
+      <PaginationTable data={data} columnTitle={columns} />
+    </DeleveryWrapper>
   )
 }
 
@@ -59,8 +59,8 @@ const data = [
   },
 ];
 
-const PickupWrapper = styled.div`
+const DeleveryWrapper = styled.div`
   padding: 0.5rem 1rem;
 `;
 
-export default WaitingForPickup
+export default DeliveryStatus

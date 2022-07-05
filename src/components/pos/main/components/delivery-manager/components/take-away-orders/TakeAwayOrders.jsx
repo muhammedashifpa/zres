@@ -15,7 +15,7 @@ const TakeAwayOrders = () => {
         </Tabwrapper>
       <div id="take-away-orders">
         <Routes>
-          <Route to="" element={<Navigate to={"waiting-for-collection"} />} />
+          <Route path="" element={<Navigate to={"waiting-for-collection"} />} />
           <Route path="waiting-for-collection" element={<WaitingForCollection />} />
           <Route path="collection" element={<Collected />} />
         </Routes>

@@ -122,7 +122,7 @@ const NavData = [
     {
         key:5,
         name:'Delivery Manager',
-        link:'delivery-management/',
+        link:'delivery-management',
         icon:<MdDeliveryDining/>,
     },
     {

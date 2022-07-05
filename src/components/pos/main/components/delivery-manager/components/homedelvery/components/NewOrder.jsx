@@ -1,5 +1,5 @@
 import React from 'react'
-import PaginationTable from "../../../../../../utils/table/PaginationTable";
+import PaginationTable from '../../../../../../../utils/table/PaginationTable'
 import styled from 'styled-components';
 
 const NewOrder= ()=> {

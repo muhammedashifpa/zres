@@ -1,10 +1,10 @@
 import React from "react";
 import Tabs from "../../../../../../utils/tabs/Tabs";
 import { Navigate, Route, Routes } from "react-router-dom";
-import NewOrder from "./NewOrder";
-import WaitingForPickup from "./WaitingForPickup";
-import CollectionInProgress from "./CollectionInProgress";
-import DeliveryStatus from "./DeliveryStatus";
+import NewOrder from "./components/NewOrder";
+import WaitingForPickup from "./components/WaitingForPickup";
+import CollectionInProgress from "./components/CollectionInProgress";
+import DeliveryStatus from "./components/DeliveryStatus";
 import Button from "../../../../../../utils/button/Button";
 import styled from "styled-components";
 const HomeDelevery = () => {
@@ -17,7 +17,7 @@ const HomeDelevery = () => {
       
       <div id="home-deliver">
         <Routes>
-          <Route to="" element={<Navigate to={"new-order"} />} />
+          <Route path="" element={<Navigate to={"new-order"} />} />
           <Route path="new-order" element={<NewOrder />} />
           <Route path="waiting-for-pickup" element={<WaitingForPickup />} />
           <Route
