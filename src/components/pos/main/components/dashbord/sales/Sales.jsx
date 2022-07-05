@@ -1,6 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
-import OrderTypeAndDurationHeader from '../utils/OrderTypeAndDurationHeader'
 import Announcement from './components/Announcement'
 import CancelledOrders from './components/CancelledOrders'
 import ChartofSales from './components/ChartofSales'
@@ -17,9 +15,7 @@ import TotalSales from './components/TotalSales'
 
 const Sales = () => {
   return (
-    <SalesWrapper className=''>
-      <OrderTypeAndDurationHeader/>
-      <GridWrapper className='container'>
+      <div className='container'>
         {/* *********************** row ************************ */}
         <div className="row my-3">
           <div className="col-12  ">
@@ -94,18 +90,9 @@ const Sales = () => {
           </div>
         </div>
         {/* ------------------------ row ------------------------ */}
-      </GridWrapper>
-
-    </SalesWrapper>
+      </div>
   )
 }
 
 export default Sales
 
-const SalesWrapper = styled.div`
-  
-`
-
-const GridWrapper = styled.div`
-
-`

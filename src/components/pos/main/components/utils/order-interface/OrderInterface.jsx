@@ -6,30 +6,31 @@ import { OrderInterfaceHeaderButtons } from './components/OrderInterfaceHeaderBu
 import { LeftOrderBill } from './components/LeftOrderBill';
 import { RightSide } from './components/rightSide/RightSide';
 import {OrderInterfaceBottomButtons} from './components/OrderInterfaceBottomButtons'
-
 const OrderInterface = () => {
-    return (
-        <OrderInterfaceOuter className="py-3">
-          <OrderInterfaceHeaderButtons />
-          <div className="mainSection row d-flex justify-content-between mx-1 mt-2">
-            <div className="left col-6 p-2 mt-2">
-                <div className=" left bg-light p-4">
-                    <LeftHead />
-                    <hr />
-                    <LeftTable tableData={tableDetails} />
-                    <hr />
-                    <LeftOrderBill bill={BillDetails} />
-                </div>
-            </div>
-            <div className="right col-6 p-2 mt-2">
-                <div className="right bg-light p-4">
-                    <RightSide />
-                </div>
+  return (
+    <>
+      <OrderInterfaceOuter className="py-3">
+        <OrderInterfaceHeaderButtons />
+        <div className="mainSection row d-flex justify-content-between mx-2 mt-2">
+          <div className="left col-6 p-2 mt-2">
+            <div className="bg-light p-4">
+              <LeftHead />
+              <hr />
+              <LeftTable tableData={tableDetails} />
+              <hr />
+              <LeftOrderBill bill={BillDetails} />
             </div>
           </div>
-          <OrderInterfaceBottomButtons />
-        </OrderInterfaceOuter>
-      );
+          <div className="right col-6 p-2 mt-2">
+            <div className="bg-light p-4">
+              <RightSide />
+            </div>
+          </div>
+        </div>
+        <OrderInterfaceBottomButtons />
+      </OrderInterfaceOuter>
+    </>
+  );
 }
 
 export default OrderInterface

@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 import { 
     BsFillHouseDoorFill,
     BsFillBagFill,
-    BsFillPersonFill
+    BsFillPersonFill,
+    BsArrowLeftShort
 
  } from "react-icons/bs";
  import {
@@ -16,12 +18,8 @@ import Nav from './utils/Nav';
 
 const SideBar = () => {
   return (
-    <SideBarWrapper className="d-flex flex-column flex-shrink-0 p-3 bg-light h-100" >
-    {/* <Link to="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <svg className="bi pe-none me-2" width="40" height="32"><use xLinkHref="#bootstrap"/></svg>
-      <span className="fs-4">Sidebar</span>
-    </Link>
-    <hr/> */}
+    <SideBarWrapper className="d-flex flex-column flex-shrink-0 p-3 bg-light h-100">
+    <Link to="/" className="btn btn-outline-primary mb-3 d-flex align-items-center gap-1"><BsArrowLeftShort/>Go Back</Link>
     <Nav data={NavData}/>
     <hr/>
     {/* <div className="dropdown">
@@ -49,8 +47,7 @@ const SideBarWrapper = styled.div`
     height: 100vh;
     height: -webkit-fill-available;
     max-height: 100vh;
-    /* overflow-x: auto;
-    overflow-y: hidden; */
+
 
     .dropdown-toggle { outline: 0; }
 
@@ -101,7 +98,7 @@ const NavData = [
     {
         key:1,
         name:'Dashboard',
-        link:'dashbord/sales',
+        link:'dashbord',
         icon:<BsFillHouseDoorFill/>,
     },
     {

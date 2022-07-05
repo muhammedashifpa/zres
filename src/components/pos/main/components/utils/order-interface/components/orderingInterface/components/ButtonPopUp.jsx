@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import Button from '../../../../../../../../utils/button/Button';
 import Modal from '../../../../../../../../utils/Modal/Modal';
+import { SlipCheck } from '../../SlipCheck/SlipCheck';
 import { PaymentRedeem } from '../../paymentRedeem/PaymentRedeem';
 
 
@@ -16,6 +17,9 @@ export const ButtonPopUp = ({ name }) => {
   const RedeemHandler = () => {
     setModalOpen(true)
   }
+
+  
+  
   return (
     <>
       <div>
@@ -48,13 +52,12 @@ export const ButtonPopUp = ({ name }) => {
         ) : (
           ""
         )}
+        {name === "slip check" ? <SlipCheck /> : "" }
+        
       </div>
       {/* modal for payment loyality redeem */}
       {modalOpen && (
-        <Modal
-          onClose={closeHandler}
-          element={<PaymentRedeem />}
-        />
+        <Modal onClose={closeHandler} element={name === "Payment" ? <PaymentRedeem /> : false} />
       )}
     </>
   );

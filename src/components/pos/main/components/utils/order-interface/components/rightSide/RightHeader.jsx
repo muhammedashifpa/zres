@@ -10,8 +10,8 @@ export const RightHeader = () => {
           <h6 className="ms-2">Menu Categories</h6>
         </div>
         <div className="">
-          <div class="form-check form-switch form-switch-sm">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+          <div className="form-check form-switch form-switch-sm">
+            <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
           </div>
         </div>
       </div>
