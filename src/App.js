@@ -15,7 +15,6 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="" element={<Navigate to={'pos/options'} />} />
         <Route path="pos/*" element={<Pos />} />
         <Route path="kds/*" element={<Kds />} />
         <Route path="settings/*" element={<Settings />} />
