@@ -8,12 +8,14 @@ import {
 import Pos from './components/pos/Pos';
 import Kds from './components/kds/Kds';
 import Settings from './components/settings/Settings';
+import AppNav from './AppNav';
 
 
 function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path='' element={<AppNav/>}/>
         <Route path="pos/*" element={<Pos />} />
         <Route path="kds/*" element={<Kds />} />
         <Route path="settings/*" element={<Settings />} />
