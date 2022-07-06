@@ -4,7 +4,6 @@ import  ReactDOM from 'react-dom';
 import ModalOverlay from './utils/ModalOverlay';
 
 const Modal = (props) => {
-  console.log(props.onClose)
   return (
     <>
         {ReactDOM.createPortal(
