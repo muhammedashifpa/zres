@@ -1,13 +1,25 @@
 
 import React from 'react'
 import { BsFillFileEarmarkFill, BsFillTrashFill, BsPencil } from "react-icons/bs";
+import Modal from '../../../utils/Modal/Modal';
+import { useState } from 'react';
+import { AddNewTerminal } from './AddNewTerminal';
 
 const Terminal = () => {
+  const [openModal, setOpenModal] = useState(false)
+  
+  const CloseModal = () => {
+    setOpenModal(false)
+  }
+
+  const Handler = () => {
+    setOpenModal(true)
+  }
   return (
     <>
       <div className="container">
         <div className="mt-3 text-end">
-          <button className="btn mx-1">
+          <button onClick={Handler} className="btn mx-1">
             <BsFillFileEarmarkFill className="mr-2" /> New
           </button>
           <button className="btn mx-1">
@@ -40,6 +52,7 @@ const Terminal = () => {
           </table>
         </div>
       </div>
+      {openModal && (<Modal onClose = {CloseModal} element={<AddNewTerminal onClose = {CloseModal} />}  />)}
     </>
   );
 }
