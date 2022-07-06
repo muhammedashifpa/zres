@@ -49,7 +49,7 @@ const Counter = () => {
           </table>
         </div>
       </div>
-      {openModal && <Modal onClose={CloseModal} element={<AddNewCounter onClose={CloseModal} />} />}
+      {openModal && <Modal onClose={CloseModal} title="Counter Master" element={<AddNewCounter onClose={CloseModal} />} />}
     </>
   );
 }
