@@ -52,7 +52,7 @@ const Terminal = () => {
           </table>
         </div>
       </div>
-      {openModal && (<Modal onClose = {CloseModal} element={<AddNewTerminal onClose = {CloseModal} />}  />)}
+      {openModal && (<Modal onClose = {CloseModal} title="Terminal Master" element={<AddNewTerminal onClose = {CloseModal} />}  />)}
     </>
   );
 }
