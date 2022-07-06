@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const LeftCompany = () => {
   return (
     <>
-      <Wrapper className=" col-6 mx-3 pt-4">
+      <Wrapper className=" col-6 pt-4">
         <div className="">
           <label className="form-label" htmlFor="">
             Company Name
