@@ -8,7 +8,7 @@ const ModalOverlay = (props) => {
     <ModalOverlayWrapper z_index={props.z_index&&props.z_index} className='card'>
         <button type="button" class="btn-close position-absolute" onClick={props.onClose}></button>
        {props.title&&<h5 class="card-header text-center fw-bold">{props.title}</h5>}
-        <div class="card-body px-5 d-flex justify-content-center">
+        <div class="card-body px-3 d-flex justify-content-center">
             {props.children}
         </div>
     </ModalOverlayWrapper>

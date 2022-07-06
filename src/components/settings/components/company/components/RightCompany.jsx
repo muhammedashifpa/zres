@@ -7,7 +7,7 @@ import styled from "styled-components";
 export const RightCompany = () => {
   return (
     <>
-      <Wrapper className="col-6 mx-3 pt-4">
+      <Wrapper className="col-6 pt-4">
         <div className="">
           <DragDrop />
         </div>
@@ -44,12 +44,6 @@ export const RightCompany = () => {
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-        </div>
-        <div className="buttons">
-          <Button name="save" className="btn btn-success mx-2" />
-          <Button name="Delete" className="btn btn-danger mx-2" />
-          <Button name="Clear" className="btn btn-warning mx-2" />
-          <Button name="Close" className="btn btn-primary mx-2" />
         </div>
       </Wrapper>
     </>
