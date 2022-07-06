@@ -3,7 +3,7 @@ import OrderInterface from '../utils/order-interface/OrderInterface';
 
 const WalkIn = () => {
   return (
-    <OrderInterface/>
+    <OrderInterface />
   );
 }
 
