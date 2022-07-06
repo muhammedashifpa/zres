@@ -17,7 +17,6 @@ const Inventory = () => {
       <Route path='recipe-management' element={<RecipeManagement/>}/>
       <Route path='reports' element={<Reports/>}/>
     </Routes>
-
   )
 }
 
