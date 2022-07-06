@@ -26,6 +26,7 @@ const ModalOverlayWrapper = styled.div`
     overflow: hidden;
     z-index:  ${props=>props.z_index?props.z_index:11};
     min-width: 350px;
+    text-align: center;
     .btn-close{
         top:10px;
         right: 10px;

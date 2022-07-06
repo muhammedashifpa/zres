@@ -4,7 +4,6 @@ import './App.css';
 import {
   Routes,
   Route,
-  Navigate,
 } from "react-router-dom";
 import Pos from './components/pos/Pos';
 import Kds from './components/kds/Kds';
@@ -15,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="" element={<Navigate to={'pos/options'} />} />
         <Route path="pos/*" element={<Pos />} />
         <Route path="kds/*" element={<Kds />} />
         <Route path="settings/*" element={<Settings />} />
