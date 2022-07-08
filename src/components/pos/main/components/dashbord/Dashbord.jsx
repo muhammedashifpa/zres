@@ -16,7 +16,7 @@ const Dashbord = () => {
       <ContentWrapper className='py-3'>
         <OrderTypeAndDurationHeader/>
         <Routes>
-          <Route path='/' element={<Navigate to='sales'/>}/>
+          <Route path='' element={<Navigate to='sales'/>}/>
           <Route path='sales' element={<Sales/>}/>
           <Route path='marketing' element={<Marketing/>}/>
           <Route path='inventory' element={<Inventory/>}/>
