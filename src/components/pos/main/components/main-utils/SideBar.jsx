@@ -19,7 +19,7 @@ import Nav from './utils/Nav';
 const SideBar = () => {
   return (
     <SideBarWrapper className="d-flex flex-column flex-shrink-0 p-3 bg-light h-100">
-    <Link to="/" className="btn btn-outline-primary mb-3 d-flex align-items-center gap-1"><BsArrowLeftShort/>Go Back</Link>
+    <Link to="/pos/options" className="btn btn-outline-primary mb-3 d-flex align-items-center gap-1"><BsArrowLeftShort/>Go Back</Link>
     <Nav data={NavData}/>
     <hr/>
     {/* <div className="dropdown">
