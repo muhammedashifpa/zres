@@ -24,6 +24,13 @@ export default InventoryMenuModal
 
 const InventoryMenuButtons = () => {
     return(
-        <Link className='btn btn-primary' to='master'>master</Link>
+        <div className='row'>
+        <Link className='btn btn-primary btn-sm' to='master'>Master</Link>
+        <Link className='btn btn-primary btn-sm mt-1' to='master'>Transaction</Link>
+        <Link className='btn btn-primary btn-sm mt-1' to='master'>Menu Management</Link>
+        <Link className='btn btn-primary btn-sm mt-1' to='master'>Recipe Management</Link>
+        <Link className='btn btn-primary btn-sm mt-1' to='master'>Reports</Link>
+        </div>
+
     )
 }
