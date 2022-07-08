@@ -45,7 +45,7 @@ const PaginationTable = ({columnTitle,data}) => {
                 <TableCell
                   key={column.id}
                   align={"center"}
-                  style={{ minWidth: column.minWidth,backgroundColor:"#cbc8d5" }}
+                  style={{ minWidth: column.minWidth }}
                 >
                   <p className="text-primary m-1">
                     <strong>{column.label}</strong>
