@@ -5,7 +5,7 @@ import Button from '../../../../utils/button/Button';
 export const RightSettingManager = () => {
   return (
     <>
-      <Wrapper className="col-8 mx-3 rounded">
+      <Wrapper className="col-7  rounded">
         <form action="">
           <div className="mb-3">
             <label htmlFor="" className="form-label">

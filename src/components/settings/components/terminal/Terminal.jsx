@@ -17,8 +17,8 @@ const Terminal = () => {
   }
   return (
     <>
-      <div className="container">
-        <div className="mt-3 text-end">
+      <div className="container-fluid bg-light p-4">
+        <div className=" text-end">
           <button onClick={Handler} className="btn mx-1">
             <BsFillFileEarmarkFill className="mr-2" /> New
           </button>
