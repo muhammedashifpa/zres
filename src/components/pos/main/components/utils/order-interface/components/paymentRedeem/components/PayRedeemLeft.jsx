@@ -1,10 +1,24 @@
 import React from 'react'
-
+import { useState } from 'react';
 import Button from '../../../../../../../../utils/button/Button';
 import { BsCalculatorFill } from "react-icons/bs";
 import styled from 'styled-components';
+import ModalLevel2 from '../../../../../../../../utils/Modal/ModalLevel2/ModalLevel2';
+import { OpenLoyalityRedeem } from './OpenLoyalityRedeem';
 
 export const PayRedeemLeft = () => {
+const [modalOpen,setSetModalOpen] = useState(false)  
+const [viewLoyality,setViewLoyality] = useState(false)
+
+  const viewLoyalityRedeem = () => {
+    setViewLoyality(true)
+    setSetModalOpen(true)
+  }
+
+  const closeHandler = () => {
+   setSetModalOpen(false)
+ }
+
   return (
     <>
       <div className="left col-6 p-2">
@@ -26,10 +40,13 @@ export const PayRedeemLeft = () => {
           <p>Walk in</p>
           <div>
             <Button name="Back" className="bg-danger mx-2" />
-            <Button name="Pay" className="bg-info mx-2" />
+            <Button onClick={viewLoyalityRedeem} name="Pay" className="bg-info mx-2" />
           </div>
         </Footer>
       </div>
+      {viewLoyality && modalOpen && (
+        <ModalLevel2  element={<OpenLoyalityRedeem />} onClose = {closeHandler} />
+      )}
     </>
   );
 }
