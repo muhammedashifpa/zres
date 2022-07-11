@@ -20,11 +20,13 @@ export const OrderInterfaceBottomButtons = () => {
     setModalOpen(true);
     setPaymentBtn(true);
     setSlipCheck(false);
+    setLoyality(false);
   };
 
   const SlipCheck = () => {
     setModalOpen(true);
     setSlipCheck(true)
+    setLoyality(false);
     setPaymentBtn(false);
   }
 
