@@ -3,11 +3,14 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import Modal from '../../../../../../utils/Modal/Modal';
 import { ButtonPopUp } from './orderingInterface/components/ButtonPopUp';
+import { LoyalityPopup } from "./LoyalityPopup";
+
 
 export const OrderInterfaceBottomButtons = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [paymentBtn, setPaymentBtn] = useState(false);
   const [slipcheck, setSlipCheck] = useState(false);
+  const [loyality, setLoyality] = useState(false);
 
   const closeHandler = () => {
     setModalOpen(false);
@@ -25,6 +28,11 @@ export const OrderInterfaceBottomButtons = () => {
     setPaymentBtn(false);
   }
 
+  const LoyalityView = () => {
+    setModalOpen(true);
+    setLoyality(true);
+  };
+
   return (
     <>
       <Wraper>
@@ -32,24 +40,30 @@ export const OrderInterfaceBottomButtons = () => {
           <div className="buttons w-100 d-flex ">
             <div className="">
               <button className="btn btn-food px-4 py-2 mx-1">Cancel</button>
-              <button onClick={SlipCheck} className="btn btn-beverage px-4 py-2 mx-1 ">Slip Check</button>
+              <button onClick={SlipCheck} className="btn btn-beverage px-4 py-2 mx-1 ">
+                Slip Check
+              </button>
 
-              <button className="btn btn-notes px-4 py-2 mx-1"> Loyality</button>
-              <button onClick={paymentHandler} className="btn btn-Order px-4 py-2  mx-1">Payment</button>
+              <button onClick={LoyalityView} className="btn btn-notes px-4 py-2 mx-1">
+                {" "}
+                Loyality
+              </button>
+              <button onClick={paymentHandler} className="btn btn-Order px-4 py-2  mx-1">
+                Payment
+              </button>
             </div>
           </div>
         </div>
       </Wraper>
-      
-      {modalOpen && (
-        <Modal
-          element={
-            <ButtonPopUp
-              name={paymentBtn ? "Payment" : slipcheck ? "slip check" : setModalOpen(false)}
-            />
-          }
-          onClose={closeHandler}
-        />
+
+      {paymentBtn && modalOpen && (
+        <Modal element={<ButtonPopUp name="Payment" />} onClose={closeHandler} />
+      )}
+      {slipcheck && modalOpen && (
+        <Modal element={<ButtonPopUp name="slip check" />} onClose={closeHandler} />
+      )}
+      {loyality && modalOpen && (
+        <Modal title="Loyality" element={<LoyalityPopup />} onClose={closeHandler} />
       )}
     </>
   );
