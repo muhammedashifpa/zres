@@ -14,7 +14,7 @@ const DineIn = () => {
       <Header/>
         <Routes>
           <Route path='' element={<Navigate to='tables'/>}/>
-          <Route path='tables' element={<Tables/>}/>
+          <Route path='tables/*' element={<Tables/>}/>
           <Route path='running-orders' element={<RunningOrders/>}/>
           <Route path='compleated-orders' element={<CompletedOrders/>}/>
         </Routes>

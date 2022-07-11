@@ -1,24 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from '../../../../../utils/button/Button'
-import {GiRoundTable } from 'react-icons/gi'
-import { Link, NavLink } from 'react-router-dom'
+import Button from '../../../../../utils/button/Button';
+import {NavLink, Link} from 'react-router-dom';
+
+import {GiRoundTable } from 'react-icons'
+
 
 const Header = (props) => {
   return (
     <>
     <HeaderWrapper>
         <HeaderLeft>
-            <Link className={'btn btn-primary'} to='all-table'>{props.allTable} All Table</Link>
-            <Link className={'btn btn-primary'} to='main-area'>{props.mainArea} Main Area</Link>
-            <Link className={'btn btn-primary'} to='patio area'>{props.PatioArea} Patio Area</Link>
-            <Link className={'btn btn-primary'} to='family-area'>{props.familyArea} Family Area</Link>
+            <Link className={'btn btn-primary'} to='tables/all-table'>{props.allTable} All Table</Link>
+            <Link className={'btn btn-primary'} to='tables/main-area'>{props.mainArea} Main Area</Link>
+            <Link className={'btn btn-primary'} to='tables/patio-area'>{props.PatioArea} Patio Area</Link>
+            <Link className={'btn btn-primary'} to='tables/family-area'>{props.familyArea} Family Area</Link>
         </HeaderLeft>
         <HeaderRight className='d-flex justify-content-evenly'>
-            <NavLink to={'avaliable'} className='btn btn-success'>Available</NavLink>
-            <NavLink to={'occupied'} className='btn btn-light'>Occupied</NavLink>
-            <NavLink to={'done-Soon'} className='btn btn-primary'>Done Soon</NavLink>
-            <NavLink to={'reservation'} className='btn btn-warning'>Reservation</NavLink>
+            <NavLink  to={'tables/avaliable'} className='btn btn-success'>Available</NavLink>
+            <NavLink to={'tables/occupied'} className='btn btn-light'>Occupied</NavLink>
+            <NavLink to={'tables/done-Soon'} className='btn btn-primary'>Done Soon</NavLink>
+            <NavLink to={'tables/reservation'} className='btn btn-warning'>Reservation</NavLink>
         </HeaderRight>
         <div>
           <Button className='me-5' name={'Refresh'}/>

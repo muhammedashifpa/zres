@@ -1,13 +1,9 @@
-import React from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import React from 'react';
 
 const Tables = () => {
   return (
     <div>
-      <h1>all Tables</h1>
-      <Routes>
-        {/* <Route path='' element={<Navigate to='all-tables'/>}/> */}
-      </Routes>
+      <h1>Tables</h1>
     </div>
   )
 }
