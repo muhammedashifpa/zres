@@ -14,9 +14,7 @@ export const ButtonPopUp = ({ name }) => {
     setModalOpen(false);
   };
 
-  const RedeemHandler = () => {
-    setModalOpen(true)
-  }
+ 
 
   
   
@@ -41,13 +39,14 @@ export const ButtonPopUp = ({ name }) => {
           </div>
         ) : name === "Payment" ? (
           <div className="my-3">
-            <p className="text-danger fs-6 my-5">
+            {/* <p className="text-danger fs-6 my-5">
               Do you want to redeem your Loyalty points in this transaction?
             </p>
             <button onClick={RedeemHandler} className="btn btn-outline-danger me-2">
               Yes
             </button>
-            <button className="btn btn-outline-danger ms-2">No</button>
+            <button className="btn btn-outline-danger ms-2">No</button> */}
+                <PaymentRedeem  />
           </div>
         ) : (
           ""
