@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const LeftSettingManager = () => {
   return (
     <>
-      <Wrapper className="col-3 rounded mx-3">
+      <Wrapper className="col-4 rounded">
         <select className="form-select my-2" aria-label="Default select example">
           <option defaultValue="">All</option>
           <option value="1">Accounts</option>

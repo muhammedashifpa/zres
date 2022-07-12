@@ -5,13 +5,13 @@ import { RightSettingManager } from "./components/RightSettingManager";
 const SettingsManager = () => {
   return (
     <>
-      <div className="container-fluid bg-light mt-4 p-2">
+      <div className="container-fluid bg-light p-4">
         <h5 className="">Settings Manager</h5>
-        <div className="row">
+        <div className="row d-flex justify-content-between">
           <LeftSettingManager />
           <RightSettingManager />
         </div>
-      </div>
+        </div>
     </>
   );
 };
